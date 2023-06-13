@@ -10,12 +10,9 @@ const { jobRouter } = require("./routes/Job.Routes");
 const app = express();
 
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
 app.use("/jobs", jobRouter)
-
-
-
 
 
 app.listen(process.env.port, async () => {
